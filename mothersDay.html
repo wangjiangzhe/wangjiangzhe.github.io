@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html> 
+<head>
+    <link rel="stylesheet" href="mothersDayStyle.css">
+    <script>
+
+    var currentSong = null;
+
+    function flowerButtonClicked(audioId) {
+    var newAudio = document.getElementById(audioId);
+    if(newAudio == currentSong) {
+        currentSong.pause();
+        displayMessage("Pausing: " + "<span class = 'colourSongName'>" + audioId + " ❤ </span>");
+    } else {
+        if(!!currentSong) {
+            currentSong.pause();
+        }
+        currentSong = newAudio;
+        currentSong.play();
+
+        displayMessage("Now playing: " + "<span class = 'colourSongName'>" + audioId + " ❤ </span>");
+    }
+
+    }
+
+    function displayMessage(message) {
+        var myMessageP = document.getElementById('message');
+        myMessageP.innerHTML = message;
+    }
+
+    </script>
+</head>
+<body>
+
+    <audio id="wanghouyusheng">
+        <source src="wanghouyusheng.wav" type="audio/wav">
+    </audio>
+
+    <audio id="yueliangdaibiaowodexin">
+        <source src="yueliangdaibiaowodexin.mp3" type="audio/mp3">
+    </audio>
+
+    <audio id="manchengyanhua">
+        <source src="manchengyanhua.mp3" type="audio/mp3">
+    </audio>
+
+    <audio id="timetosaygoodbye">
+        <source src="timetosaygoodbye.mp3" type="audio/mp3">
+    </audio>
+
+    <audio id="ganbeipengyou">
+        <source src="ganbeipengyou.mp3" type="audio/mp3">
+    </audio>
+
+    <audio id="riverflowsinyou">
+        <source src="riverflowsinyou.mp3" type="audio/mp3">
+    </audio>
+
+    <audio id="shishangzhiyoumamahao">
+        <source src="shishangzhiyoumamahao.mp3" type="audio/mp3">
+    </audio>
+
+    <audio id="kisstherain">
+        <source src="kisstherain.mp3" type="audio/mp3">
+    </audio>
+
+    <audio id="zhunipingan">
+        <source src="zhunipingan.mp3" type="audio/mp3">
+    </audio>
+
+    <h1>Happy Mother's Day!</h1>
+<p id='message'>Love you Mummy! ❤ From Brianna (and bubby a bit)</p>
+    <table>
+        <tr>
+            <td><img id="flower1" src="flower1.jpeg" onclick="flowerButtonClicked('wanghouyusheng')" width = 200px></td>
+            <td><img id="flower2" src="flower2.jpeg" onclick="flowerButtonClicked('yueliangdaibiaowodexin')" width = 200px></td>
+            <td><img id="flower3" src="flower3.jpeg" onclick="flowerButtonClicked('manchengyanhua')" width = 200px></td>
+        </tr>
+        <tr>
+            <td><img id="flower4" src="flower4.jpeg" onclick="flowerButtonClicked('timetosaygoodbye')" width = 200px></td>
+            <td><img id="flower5" src="flower5.jpeg" onclick="flowerButtonClicked('ganbeipengyou')" width = 200px></td>
+            <td><img id="flower6" src="flower6.jpeg" onclick="flowerButtonClicked('riverflowsinyou')" width = 200px></td>
+        </tr>
+        <tr>
+            <td><img id="flower7" src="flower7.jpeg" onclick="flowerButtonClicked('shishangzhiyoumamahao')" width = 200px></td>
+            <td><img id="flower8" src="flower8.jpeg" onclick="flowerButtonClicked('kisstherain')" width = 200px></td>
+            <td><img id="flower9" src="flower9.jpeg" onclick="flowerButtonClicked('zhunipingan')" width = 200px></td>
+        </tr>
+    </table>
+</body>
+</html>
